@@ -1,0 +1,57 @@
+[project]
+name = "diplomacy-llm"
+version = "0.1.0"
+description = "Diplomacy based LLM benchmark"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "rust-just>=1.37.0",
+    "pre-commit>=4.0.1",
+]
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "__pycache__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+line-length = 88
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+ignore = ["E501", "D203", "RET503", "D205"]
+
+select = ["E", "W", "F", "I", "UP", "D", "B", "SIM", "ASYNC", "A", "PIE", "T20", "Q", "RSE", "RET", "SLF001", "PTH", "N", "ANN"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
